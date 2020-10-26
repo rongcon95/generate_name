@@ -1,0 +1,12 @@
+input{
+  border: 1px solid darkgreen;
+}
+input:hover{
+  border: 1px solid darkgreen;
+}
+input:focus{
+  border: 1px solid darkgreen !important;
+}
+input:focus-within{
+  border: 1px solid darkgreen !important;
+}

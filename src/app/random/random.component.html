@@ -3,7 +3,8 @@
   <input  class="mr-2" [ngStyle]="{
     'width': '25%',
     'height': '30px',
-    'margin-right': '10px'
+    'margin-right': '10px',
+    'border-radius': '10px'
   }" name="text-content" id="text-content" [(ngModel)]="firstName">
   <ngx-copy-to-clipboard target="#text-content" [success]="onSuccess" [error]="onError">Copy
   </ngx-copy-to-clipboard>
@@ -12,7 +13,9 @@
   <input  class="mr-2" [ngStyle]="{
     'width': '25%',
     'height': '30px',
-    'margin-right': '10px'
+    'margin-right': '10px',
+    'margin-top': '10px',
+    'border-radius': '10px'
   }" name="lastname" id="lastname" [(ngModel)]="lastName">
   <ngx-copy-to-clipboard target="#lastname" [success]="onSuccessLastName" [error]="onErrorLastName">Copy
   </ngx-copy-to-clipboard>
@@ -21,7 +24,9 @@
   <input class="mr-2" [ngStyle]="{
     'width': '25%',
     'height': '30px',
-    'margin-right': '10px'
+    'margin-right': '10px',
+    'margin-top': '10px',
+    'border-radius': '10px'
   }" name="emails" id="emails" [(ngModel)]="email">
   <ngx-copy-to-clipboard target="#emails" [success]="onSuccessEmail" [error]="onErrorEmail">Copy
   </ngx-copy-to-clipboard>
