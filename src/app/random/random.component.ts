@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as copy from 'copy-to-clipboard';
+import * as faker_useragent from 'random-useragent';
 
 @Component({
   selector: 'app-random',
@@ -19,6 +20,7 @@ export class RandomComponent implements OnInit {
   firstName: any;
   lastName: any;
   email: any;
+  UA: any;
   firstNames: any = [
     'An',
     'Bach',
@@ -347,5 +349,15 @@ export class RandomComponent implements OnInit {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+  }
+
+  UAList: any = [];
+  generateUA() {
+    for(let i = 0 ; i < 5000 ; i++) {
+      const xxx = faker_useragent.getRandom((ua) => {
+        return ua.browserName === this.UA && parseFloat(ua.browserVersion) >= 20;
+      });
+      this.UAList.push(xxx);
+    }
   }
 }
