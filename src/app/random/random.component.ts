@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as copy from 'copy-to-clipboard';
 import * as faker_useragent from 'random-useragent';
+import * as faker from 'faker/locale/vi';
 
 @Component({
   selector: 'app-random',
@@ -359,5 +360,12 @@ export class RandomComponent implements OnInit {
       });
       this.UAList.push(xxx);
     }
+  }
+  phoneNumber: any;
+  dauso = ['84964', '84936', '84903', '84708', '84799', '84769', '84905', '84793'];
+  randomPhoneNumber() {
+    this.phoneNumber = this.dauso[Math.floor(Math.random() * this.dauso.length)] + Math.floor(Math.random() * 10)+
+    Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10)
+    + Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10) ;
   }
 }

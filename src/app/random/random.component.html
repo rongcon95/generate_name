@@ -31,6 +31,9 @@
   <ngx-copy-to-clipboard target="#emails" [success]="onSuccessEmail" [error]="onErrorEmail">Copy
   </ngx-copy-to-clipboard>
 </div>
-<div>Random User agent</div>
-<input placeholder="nhập tên br muốn tạo" [(ngModel)]="UA" (keyup.enter)="generateUA()">
-<div *ngFor="let ua of UAList">{{ua}}</div>
+<!--<div>Random User agent</div>-->
+<!--<input placeholder="nhập tên br muốn tạo" [(ngModel)]="UA" (keyup.enter)="generateUA()">-->
+<!--<div *ngFor="let ua of UAList">{{ua}}</div>-->
+
+<button (click)="randomPhoneNumber()">randomPhoneNumber</button>
+<div>{{phoneNumber}}</div>
