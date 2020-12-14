@@ -1,39 +1,5 @@
-<!--<p *ngFor="let name of firstNames">{{name}}</p>-->
-<div class="wrapper">
-  <input  class="mr-2" [ngStyle]="{
-    'width': '25%',
-    'height': '30px',
-    'margin-right': '10px',
-    'border-radius': '10px'
-  }" name="text-content" id="text-content" [(ngModel)]="firstName">
-  <ngx-copy-to-clipboard target="#text-content" [success]="onSuccess" [error]="onError">Copy
-  </ngx-copy-to-clipboard>
+<div [ngStyle]="{height: '500px', overflow: 'auto'}">
+  <div *ngFor="let name of listName">
+    {{name}}
+  </div>
 </div>
-<div class="wrapper">
-  <input  class="mr-2" [ngStyle]="{
-    'width': '25%',
-    'height': '30px',
-    'margin-right': '10px',
-    'margin-top': '10px',
-    'border-radius': '10px'
-  }" name="lastname" id="lastname" [(ngModel)]="lastName">
-  <ngx-copy-to-clipboard target="#lastname" [success]="onSuccessLastName" [error]="onErrorLastName">Copy
-  </ngx-copy-to-clipboard>
-</div>
-<div class="wrapper">
-  <input class="mr-2" [ngStyle]="{
-    'width': '25%',
-    'height': '30px',
-    'margin-right': '10px',
-    'margin-top': '10px',
-    'border-radius': '10px'
-  }" name="emails" id="emails" [(ngModel)]="email">
-  <ngx-copy-to-clipboard target="#emails" [success]="onSuccessEmail" [error]="onErrorEmail">Copy
-  </ngx-copy-to-clipboard>
-</div>
-<!--<div>Random User agent</div>-->
-<!--<input placeholder="nhập tên br muốn tạo" [(ngModel)]="UA" (keyup.enter)="generateUA()">-->
-<!--<div *ngFor="let ua of UAList">{{ua}}</div>-->
-
-<button (click)="randomPhoneNumber()">randomPhoneNumber</button>
-<div>{{phoneNumber}}</div>
