@@ -11,8 +11,10 @@ import * as faker from 'faker/locale/id_ID';
 export class RandomComponent implements OnInit {
   title = 'nguyenhungtuan';
   randomName: any;
+  namexxxx: any;
   listName: any =[];
   ngOnInit(): void {
+    this.namexxxx = faker.name.lastName();
     for (let i = 0; i < 5000; i++) {
       const firstName = faker.name.firstName();
       const lastName = faker.name.lastName();
@@ -24,5 +26,13 @@ export class RandomComponent implements OnInit {
       });
       this.listName.push(`${firstName} ${lastName}`);
     }
+  }
+
+  copyInputMessage(inputElement) {
+    this.namexxxx = faker.name.firstName();
+    inputElement.select();
+    document.execCommand("copy");
+    inputElement.setSelectionRange(0, 0);
+    // this.namexxxx = faker.name.firstName();
   }
 }
